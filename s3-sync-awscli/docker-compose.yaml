@@ -1,0 +1,13 @@
+version: '2.1'
+services:
+
+######################################################
+# s3-sync
+######################################################
+
+  s3-sync:
+    image: markday1962/s3-sync-awscli:dev
+    restart: always
+    container_name: s3-sync
+    volumes:
+      - /mnt/data/airflow-docker/dags:/tmp/dags
